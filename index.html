@@ -7,14 +7,30 @@
 <body>
   <div id="clickableDiv" style="width: 400px; height: 400px; background-color: lightblue;">
   </div>
-  <button id="resetButton">Reset</button>
+  <div>
+    <p>Taxa de erro: (0-100)%:</p>
+    <input type="number" id="errorRateInput" min="0" max="100" value="40"/>
+  </div>
+  <div>
+    <p>Padrão desejado
+      <br>
+      (Entre com apenas "avg", "short", "long" separados por vírgula)
+    </p>
+    <input type="text" id="patternInput" value="long,short,short,avg,long,avg"/>
+  </div>
+  <button style="margin-top: 20px;" id="resetButton">Reset</button>
   <div style="padding: 4px; margin-top: 20px; width: 400px; height: 400px; overflow: auto;">
-  <p>
-    Shave and a haircut possui 7 notas, logo, são 6 espaços temporais 
-    entre elas. A identificação será feita pela média dos espaços temporais de
-    cada click do mouse, seguindo o padrão: 
-  </p>
-  <p>[longa, curta, curta, média, longa, média]</p>
+    <p>
+      Shave and a haircut possui 7 notas, logo, são 6 espaços temporais 
+      entre elas. A identificação será feita pela média dos espaços temporais de
+      cada click do mouse, seguindo o padrão: 
+    </p>
+    <p>[longa, curta, curta, média, longa, média]</p>
+    <p>
+      Esse foi o padrão que eu encontrei testando os meus clicks. Mas vou 
+      generalizar permitindo que o usuário crie o próprio padrão. E claro,
+      dar uma margem de erro para a diferença dos clicks.
+    </p>
   </div>
 </body>
 </html>
